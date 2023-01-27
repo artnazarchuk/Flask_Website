@@ -5,5 +5,24 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Это главная страница</h1>
+    <main class="content">
+        <div class="content_main main">
+            <div class="container">
+                <div class="main_body">
+                    <h1 class="title">Lorem ipsum dolor sit amet.</h1>
+                    <div class="text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda eligendi explicabo
+                        harum, itaque minima quis recusandae repellat. Adipisci, eius.
+                    </div>
+                    <div class="buttons">
+                        <a href="" class="button">Lorem ipsum dolor</a>
+                        <a href="" class="button button_border">Lern More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <img src="{{ url_for('static', filename='img/1_1.jpg') }}" alt="image">
+            </div>
+        </div>
+    </main>
 {% endblock %}
