@@ -5,5 +5,10 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Страница про нас</h1>
+    {% for elem in articles %}
+        <h1 class="title">{{ elem.title }}</h1>
+        <h2 class="text" style="color: #333; font-weight: 700">{{ elem.intro }}</h2>
+        <h3 class="text">{{ elem.text }}</h3>
+    {% endfor %}
+
 {% endblock %}

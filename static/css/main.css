@@ -140,7 +140,7 @@ body {
     position: relative;
     padding: 180px 0px 190px 0px;
     z-index: 2;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .main_body > *:not(:last-child) {
@@ -158,7 +158,6 @@ body {
     color: #737373;
     font-size: 20px;
     line-height: 150%;
-
 }
 
 .buttons {
@@ -202,6 +201,41 @@ body {
     object-fit: cover;
     object-position: left;
 
+}
+/*-------ФОРМА---------------------------------------------------*/
+
+.text_input {
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    line-height: 1.5;
+    padding-left: 10px;
+    font-family: Montserrat;
+    appearance: none;
+    margin-bottom: 10px;
+    border: 2px solid #0d5c63;
+    border-radius: 5px;
+}
+
+
+.text textarea {
+    font-family: Montserrat;
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    line-height: 1.5;
+    padding-left: 10px;
+    border: 2px solid #0d5c63;
+    border-radius: 5px;
+
+}
+.text textarea:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.button_form {
+    border: none;
+    font-size: 20px;
 }
 
 /*-------ПОДВАЛ---------------------------------------------------*/
