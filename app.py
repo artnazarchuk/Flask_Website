@@ -23,8 +23,42 @@ def index():
 
 @app.route('/about')
 def about():
-    articles = Article.query.order_by(Article.date).all()
+    articles = Article.query.order_by(Article.date.desc()).all()
     return render_template('about.html', articles=articles)
+
+@app.route('/article/<int:id>')
+def article_detail(id):
+    detail = Article.query.get(id)
+    return render_template('article_detail.html', detail=detail)
+
+@app.route('/article/<int:id>/delete')
+def article_delete(id):
+    detail = Article.query.get_or_404(id)
+    try:
+        db.session.delete(detail)
+        db.session.commit()
+        return redirect('/about')
+    except:
+        return 'При удалении статьи произошла ошибка'
+
+
+@app.route('/article/<int:id>/update', methods=['POST', 'GET'])
+def article_update(id):
+    detail = Article.query.get(id)
+    if request.method == 'POST':
+        detail.title = request.form['title']
+        detail.intro = request.form['intro']
+        detail.text = request.form['text']
+
+        try:
+            db.session.add(detail)
+            db.session.commit()
+            return redirect('/about')
+        except:
+            return 'При обновлении статьи произошла ошибка'
+    else:
+        detail = Article.query.get(id)
+        return render_template('article_update.html', detail=detail)
 
 @app.route('/article', methods=['POST', 'GET'])
 def article():

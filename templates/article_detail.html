@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ detail.title }}
+{% endblock %}
+
+{% block content %}
+    <h1 class="title">{{ detail.title }}</h1>
+    <h3 class="text" style="font-size: 13px">Дата: {{ detail.date.date() }}</h3>
+    <h2 class="text" style="color: #333; font-weight: 700">{{ detail.intro }}</h2>
+    <h3 class="text">{{ detail.text }}</h3>
+    <div class="buttons">
+        <a href="/article/{{ detail.id }}/delete" class="button">Удалить</a>
+        <a href="/article/{{ detail.id }}/update" class="button button_border">Редактировать</a>
+    </div>
+{% endblock %}

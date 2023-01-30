@@ -176,6 +176,11 @@ body {
     min-height: 50px;
     font-weight: 700;
     margin: 10px 0px;
+    transition: .4s;
+}
+.button:hover{
+    background: #ee6a36;
+    transition: .4s;
 }
 
 .button:not(:last-child) {
@@ -186,6 +191,9 @@ body {
     background: none;
     color: #0d5c63;
     border: 1px solid #0d5c63;
+}
+.button_border:hover{
+    background: #fff;
 }
 
 .image  {
@@ -233,7 +241,12 @@ body {
 
 .button_form {
     border: none;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+}
+.button_form:hover{
+    background: #ee6a36;
 }
 
 /*-------ПОДВАЛ---------------------------------------------------*/
