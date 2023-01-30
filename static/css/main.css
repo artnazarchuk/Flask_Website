@@ -193,14 +193,13 @@ body {
 }
 
 .image img {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: left;
-
 }
 /*-------ФОРМА---------------------------------------------------*/
 
@@ -213,7 +212,7 @@ body {
     font-family: Montserrat;
     appearance: none;
     margin-bottom: 10px;
-    border: 2px solid #0d5c63;
+    border: 2px solid grey;
     border-radius: 5px;
 }
 
@@ -225,9 +224,8 @@ body {
     width: 100%;
     line-height: 1.5;
     padding-left: 10px;
-    border: 2px solid #0d5c63;
+    border: 2px solid grey;
     border-radius: 5px;
-
 }
 .text textarea:not(:last-child) {
     margin-bottom: 10px;
@@ -240,7 +238,7 @@ body {
 
 /*-------ПОДВАЛ---------------------------------------------------*/
 .footer {
-    height: 100px;
+    height: 50px;
 }
 
 

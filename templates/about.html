@@ -7,8 +7,10 @@
 {% block content %}
     {% for elem in articles %}
         <h1 class="title">{{ elem.title }}</h1>
+        <h3 class="text" style="font-size: 13px">Дата: {{ elem.date.date() }}</h3>
         <h2 class="text" style="color: #333; font-weight: 700">{{ elem.intro }}</h2>
         <h3 class="text">{{ elem.text }}</h3>
+        <button class="button button_form">Подробнее</button>
+        <hr>
     {% endfor %}
-
 {% endblock %}
